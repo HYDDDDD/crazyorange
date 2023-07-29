@@ -1,10 +1,16 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import { NextPageWithLayout } from "@/types/layout";
+import { getDefaultLayout } from "@/utils/getLayout";
+import React from "react";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+const HomePage: NextPageWithLayout = () => {
   return (
-    <main>Hello World!</main>
+    <div>
+      <h1>fdsfds</h1>
+      <p>dfsdf</p>
+    </div>
   );
-}
+};
+
+HomePage.getLayout = getDefaultLayout;
+
+export default HomePage;
