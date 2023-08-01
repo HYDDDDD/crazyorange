@@ -1,8 +1,10 @@
-import React from 'react'
+import { Fragment } from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <Fragment>
+      <footer className="text-green-500 bg-sky-500">Footer</footer>
+    </Fragment>
   )
 }
 

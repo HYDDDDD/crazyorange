@@ -1,12 +1,12 @@
 import React, { FC, Fragment, PropsWithChildren } from 'react'
-import Header from './Header'
+import Header from './Header/Navbar'
 import Footer from './Footer'
 
 export interface IDefaultLayoutProps extends PropsWithChildren {
-  className? : string
+  className?: string
 }
 
-const DefaultLayout: FC<IDefaultLayoutProps> = ({children}) => {
+const DefaultLayout: FC<IDefaultLayoutProps> = ({ children }) => {
   return (
     <Fragment>
       <Header />
