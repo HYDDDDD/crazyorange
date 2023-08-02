@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 const Footer = () => {
   return (
     <Fragment>
-      <footer className="text-green-500 bg-sky-500">Footer</footer>
+      <footer className="bg-sky-500 py-6 text-green-500">Footer</footer>
     </Fragment>
   )
 }
