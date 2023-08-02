@@ -7,7 +7,7 @@ const HomePage: NextPageWithLayout = () => {
   // return this!
   return (
     <Fragment>
-      <h1 className="bg-slate-500 text-red-500">content</h1>
+      <h1 className="bg-slate-500 text-red-500 ">content</h1>
     </Fragment>
   )
 }
