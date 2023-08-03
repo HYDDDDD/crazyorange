@@ -1,9 +1,12 @@
+import clsx from 'clsx'
 import { Fragment } from 'react'
 
 const Footer = () => {
   return (
     <Fragment>
-      <footer className="bg-sky-500 py-6 text-green-500">Footer</footer>
+      <footer className={clsx(`main-space-x py-6`, `bg-sky-500 text-green-500`)}>
+        <p>Footer</p>
+      </footer>
     </Fragment>
   )
 }
