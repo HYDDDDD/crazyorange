@@ -1,7 +1,7 @@
 import { NextGetLayout } from '@/types/layout'
 import { getDefaultLayout } from '@/utils'
 import clsx from 'clsx'
-import React, { Fragment } from 'react'
+import React from 'react'
 
 type StylesheetpageProps = NextGetLayout
 
@@ -10,22 +10,25 @@ const cardTitle = clsx(`text-7xl`)
 
 const Stylesheetpage: StylesheetpageProps = () => {
   return (
-    <section className="space-y-16 pb-14">
-      <h1 className={clsx(cardTitle, `text-center`)}>Stylesheet</h1>
-
-      <ColorCard />
-      <TypographyCard />
-      <ButtonCard />
-      <ModalCard />
-      <DropDownCard />
-      <FormInputCard />
-      <PaginationCard />
-      <DrawerCard />
-      <RatingCard />
-      <LightBoxCard />
-      <SearchCard />
-      <HeaderCard />
-      <FooterCard />
+    <section>
+      <div className="container">
+        <div className="grid min-h-screen grid-cols-1 items-start gap-6 py-6">
+          <h1 className={clsx(cardTitle, `text-center`)}>Stylesheet</h1>
+          <ColorCard />
+          <TypographyCard />
+          <ButtonCard />
+          <ModalCard />
+          <DropDownCard />
+          <FormInputCard />
+          <PaginationCard />
+          <DrawerCard />
+          <RatingCard />
+          <LightBoxCard />
+          <SearchCard />
+          <HeaderCard />
+          <FooterCard />
+        </div>
+      </div>
     </section>
   )
 }
@@ -182,6 +185,26 @@ const TypographyCard = () => {
   return (
     <div className={cardStyle}>
       <h2 className={cardTitle}>Typography</h2>
+      <div className="grid grid-cols-2">
+        <div className="flex flex-col space-y-6">
+          <span className="text-header-1">Header 1</span>
+          <span className="text-header-2">Header 2</span>
+          <span className="text-header-3">Header 3</span>
+          <span className="text-header-4">Header 4</span>
+          <span className="text-header-5">Header 5</span>
+          <span className="text-header-6">Header 6</span>
+          <span className="text-header-7">Header 7</span>
+        </div>
+        <div className="flex flex-col space-y-6">
+          <span className="text-body-24">Text 24</span>
+          <span className="text-body-20">Text 20</span>
+          <span className="text-body-18">Text 18</span>
+          <span className="text-body-16">Text 16</span>
+          <span className="text-body-14">Text 14</span>
+          <span className="text-body-12">Text 12</span>
+          <span className="text-body-10">Text 10</span>
+        </div>
+      </div>
     </div>
   )
 }
@@ -190,6 +213,39 @@ const ButtonCard = () => {
   return (
     <div className={cardStyle}>
       <h2 className={cardTitle}>Button</h2>
+      <div className="grid grid-cols-3 gap-x-4 gap-y-8">
+        {[
+          'Primary',
+          'Primary-Outline',
+          'Primary-Invert',
+          'Success',
+          'Success-Outline',
+          'Success-invert',
+          'Warning',
+          'Warning-Outline',
+          'Warning-Invert',
+          'Error',
+          'Error-Outline',
+          'Error-Invert',
+          'Info',
+          'Info-Outline',
+          'Info-Invert',
+        ].map((e) => {
+          return (
+            <div key={`button-${e}`} className="space-y-4">
+              <span className="text-body-24">{e}</span>
+
+              <div>
+                {/* Default */}
+                <div>Default</div>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

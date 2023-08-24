@@ -1,5 +1,16 @@
 const plugin = require('tailwindcss/plugin')
 
+const BASE_FONT_SIZE = {
+  header: {
+    lineHeight: '140%',
+    fontWeight: 500,
+  },
+  body: {
+    lineHeight: '150%',
+    fontWeight: 400,
+  },
+}
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,7 +19,42 @@ module.exports = {
     './src/layouts/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      '4xl': { max: '1600px' },
+      '3xl': { max: '1440px' },
+      '2xl': { max: '1366px' },
+      xl: { max: '1280px' },
+      lg: { max: '1024px' },
+      md: { max: '768px' },
+      sm: { max: '640px' },
+      xs: { max: '376px' },
+      se: { max: '340px' },
+    },
+
     extend: {
+      fontFamily: {
+        kanit: ['Kanit', 'sans-serif'],
+      },
+      fontSize: {
+        'header-1': ['64px', BASE_FONT_SIZE.header],
+        'header-2': ['48px', BASE_FONT_SIZE.header],
+        'header-3': ['32px', BASE_FONT_SIZE.header],
+        'header-4': ['24px', BASE_FONT_SIZE.header],
+        'header-5': ['20px', BASE_FONT_SIZE.header],
+        'header-6': ['16px', BASE_FONT_SIZE.header],
+        'header-7': ['14px', BASE_FONT_SIZE.header],
+        'body-24': ['24px', BASE_FONT_SIZE.body],
+        'body-20': ['20px', BASE_FONT_SIZE.body],
+        'body-18': ['18px', BASE_FONT_SIZE.body],
+        'body-16': ['16px', BASE_FONT_SIZE.body],
+        'body-14': ['14px', BASE_FONT_SIZE.body],
+        'body-12': ['12px', BASE_FONT_SIZE.body],
+        'body-10': ['10px', BASE_FONT_SIZE.body],
+        se: ['0.625rem', { lineHeight: '1.5' }],
+        xs: ['0.75rem', { lineHeight: '1.5' }],
+        sm: ['0.875rem', { lineHeight: '1.5' }],
+        base: ['1rem', { lineHeight: '1.5' }],
+      },
       colors: {
         // primary
 

@@ -4,8 +4,10 @@ import { Fragment } from 'react'
 const Footer = () => {
   return (
     <Fragment>
-      <footer className={clsx(`main-space-x py-6`, `bg-sky-500 text-green-500`)}>
-        <p>Footer</p>
+      <footer className={clsx(`main-space-x py-6`, `bg-dark-50`)}>
+        <div className={clsx(`container`)}>
+          <p>Footer</p>
+        </div>
       </footer>
     </Fragment>
   )
