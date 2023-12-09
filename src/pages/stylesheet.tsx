@@ -1,3 +1,5 @@
+import Button from '@/components/UI/Button'
+import { ButtonVariant } from '@/components/UI/Button/types'
 import { NextGetLayout } from '@/types/layout'
 import { getDefaultLayout } from '@/utils'
 import clsx from 'clsx'
@@ -215,32 +217,37 @@ const ButtonCard = () => {
       <h2 className={cardTitle}>Button</h2>
       <div className="grid grid-cols-3 gap-x-4 gap-y-8">
         {[
-          'Primary',
-          'Primary-Outline',
-          'Primary-Invert',
-          'Success',
-          'Success-Outline',
-          'Success-invert',
-          'Warning',
-          'Warning-Outline',
-          'Warning-Invert',
-          'Error',
-          'Error-Outline',
-          'Error-Invert',
-          'Info',
-          'Info-Outline',
-          'Info-Invert',
+          'primary',
+          'primary-outline',
+          'primary-invert',
+          'success',
+          'success-outline',
+          'success-invert',
+          'warning',
+          'warning-outline',
+          'warning-invert',
+          'error',
+          'error-outline',
+          'error-invert',
+          'info',
+          'info-outline',
+          'info-invert',
         ].map((e) => {
+          // replace -> คำสั่งสำหรับแทนที่ข้อความเก่า ด้วยข้อความใหม่ รับ argument 2 ค่า คือ
+          // 1.ข้อความที่ต้องการแทนที่ 2.ข้อความใหม่ที่จะนำมาแทนที่
+          const variant = e.replace('-outline', '').replace('-invert', '') as ButtonVariant
+
           return (
             <div key={`button-${e}`} className="space-y-4">
               <span className="text-body-24">{e}</span>
 
-              <div>
+              <div className="grid grid-cols-3 items-center">
                 {/* Default */}
                 <div>Default</div>
                 <div>
-                  <div></div>
+                  <Button variant={variant}>Button</Button>
                 </div>
+                <div></div>
               </div>
             </div>
           )

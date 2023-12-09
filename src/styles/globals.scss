@@ -9,4 +9,6 @@
 @import './base/_typography';
 
 @tailwind components;
+@import './component/_button';
+
 @tailwind utilities;

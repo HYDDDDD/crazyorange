@@ -1,0 +1,52 @@
+@use 'sass:selector';
+
+/* mixin allow to define styles that can be "re-used" 
+and make it to avoid using non-semantic classes.*/
+/* ทำปุ่มโค้ง */
+/* & is used to nest selectors. */
+// @mixin button-rounder($key, $size) {
+//   &#{selector-append(&, '-rounder-#{$key}')} {
+//     border-radius: $size;
+//   }
+// }
+
+.button {
+  @apply items-center justify-center transition;
+
+  min-height: 48px;
+
+  /* &.class name  -> css : .something -> scss : &.something */
+
+  &.default {
+    @apply bg-slate-500;
+  }
+
+  &.primary {
+    @apply bg-orange-500;
+  }
+
+  &.success {
+    @apply bg-success-500;
+  }
+
+  &.warning {
+    @apply bg-warning-500;
+  }
+
+  &.error {
+    @apply bg-error-500;
+  }
+
+  &.info {
+    @apply bg-info-500;
+  }
+}
+
+/* ROUNDER */
+// spacing : ระยะห่าง , sizing scale.
+// @include button-rounder('default', theme('spacing.1'));
+// @include button-rounder('sm', theme('spacing[0.5]'));
+// @include button-rounder('lg', theme('spacing.2'));
+// @include button-rounder('xl', theme('spacing.3'));
+// @include button-rounder('2xl', theme('spacing.4'));
+// @include button-rounder('3xl', theme('spacing.6'));

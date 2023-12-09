@@ -3,20 +3,24 @@ import { NextPageWithLayout } from '@/types/layout'
 import { getDefaultLayout } from '@/utils/getLayout'
 import React from 'react'
 import Link from 'next/link'
+import clsx from 'clsx'
+import Button from '@/components/UI/Button'
 
 const HomePage: NextPageWithLayout = () => {
   // return this!
-  ;<h1 className="bg-slate-500 text-red-500 ">content</h1>
   return (
     <Fragment>
       <section>
-        <h1>content</h1>
-
-        <Link href="/stylesheet">
-          <button className="bg-orange-300">
-            <p>stylesheet page</p>
-          </button>
-        </Link>
+        <div className="container">
+          <div>
+            <h1>content</h1>
+            <Link href="/stylesheet">
+              <Button className={clsx(`bg-orange-300`, `hover:bg-orange-500`)}>
+                <p>stylesheet page</p>
+              </Button>
+            </Link>
+          </div>
+        </div>
       </section>
     </Fragment>
   )
