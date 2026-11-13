@@ -1,7 +1,6 @@
 import { Fragment } from 'react'
 import { NextPageWithLayout } from '@/types/layout'
 import { getDefaultLayout } from '@/utils/getLayout'
-import React from 'react'
 
 const HomePage: NextPageWithLayout = () => {
   // return this!

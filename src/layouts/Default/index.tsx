@@ -1,4 +1,4 @@
-import React, { FC, Fragment, PropsWithChildren } from 'react'
+import { FC, Fragment, PropsWithChildren } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
